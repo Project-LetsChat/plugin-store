@@ -1,0 +1,129 @@
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#search {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plugin-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    cursor: pointer;
+}
+
+.plugin-card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.plugin-card p {
+    color: #555;
+}
+
+.plugin-detail {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* New styles for reviews */
+.reviews {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+#reviews-container {
+    margin-bottom: 2rem;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review h4 {
+    margin: 0;
+}
+
+.review p {
+    margin: 0.5rem 0 0;
+}
+
+#review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review-form label {
+    margin-top: 1rem;
+}
+
+#review-form input, #review-form select, #review-form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#review-form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#review-form button:hover {
+    background-color: #555;
+}
