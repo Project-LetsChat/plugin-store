@@ -37,6 +37,8 @@ main {
     padding: 1rem;
     width: 300px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .plugin-card h2 {
@@ -46,6 +48,13 @@ main {
 
 .plugin-card p {
     color: #555;
+}
+
+/* Updated styles for plugin container to create a horizontal layout */
+#plugin-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .plugin-detail {
