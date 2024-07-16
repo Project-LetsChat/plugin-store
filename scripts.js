@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const plugins = [
-        { id: 1, name: 'Plugin One', description: 'Description for plugin one.', version: '1.0.0', author: 'Author One' },
-        { id: 2, name: 'Plugin Two', description: 'Description for plugin two.', version: '1.1.0', author: 'Author Two' },
-        { id: 3, name: 'Plugin Three', description: 'Description for plugin three.', version: '1.2.0', author: 'Author Three' },
+        { id: 1, name: 'Plugin One', description: 'Description for plugin one.', version: '1.0.0', author: 'Author One', downloadUrl: 'example.txt' },
+        { id: 2, name: 'Plugin Two', description: 'Description for plugin two.', version: '1.1.0', author: 'Author Two', downloadUrl: 'example.txt' },
+        { id: 3, name: 'Plugin Three', description: 'Description for plugin three.', version: '1.2.0', author: 'Author Three', downloadUrl: 'example.txt' },
     ];
 
     const reviews = {
@@ -166,6 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('plugin-description').textContent = `Description: ${selectedPlugin.description}`;
             document.getElementById('plugin-version').textContent = `Version: ${selectedPlugin.version}`;
             document.getElementById('plugin-author').textContent = `Author: ${selectedPlugin.author}`;
+
+            const downloadButton = document.getElementById('download-button');
+            downloadButton.href = selectedPlugin.downloadUrl;
+            downloadButton.setAttribute('download', selectedPlugin.downloadUrl);
+
             displayReviews(selectedPlugin.id);
         }
 

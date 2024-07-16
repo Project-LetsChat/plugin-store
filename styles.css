@@ -11,6 +11,7 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
 
 #search {
@@ -147,4 +148,38 @@ footer {
 #pagination-controls button:disabled {
     background-color: #555;
     cursor: not-allowed;
+}
+
+/* New styles for download button */
+.download-button {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #555;
+}
+
+/* New styles for back button */
+.back-button {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: #555;
 }
