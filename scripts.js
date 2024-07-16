@@ -8,7 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviews = {
         1: [
             { name: 'Alice', rating: 5, comment: 'Excellent plugin!' },
-            { name: 'Bob', rating: 4, comment: 'Very good, but could be improved.' }
+            { name: 'Bob', rating: 4, comment: 'Very good, but could be improved.' },
+            { name: 'Charlie', rating: 3, comment: 'Average plugin.' },
+            { name: 'Dave', rating: 5, comment: 'Fantastic!' },
+            { name: 'Eve', rating: 4, comment: 'Great plugin!' },
+            { name: 'Frank', rating: 2, comment: 'Not what I expected.' },
+            { name: 'Grace', rating: 5, comment: 'Highly recommend!' }
         ],
         2: [
             { name: 'Charlie', rating: 3, comment: 'Average plugin.' }
@@ -18,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pluginContainer = document.getElementById('plugin-container');
     const searchInput = document.getElementById('search');
+    const reviewsPerPage = 3;
+    let currentPage = 1;
 
     function calculateAverageRating(pluginId) {
         const pluginReviews = reviews[pluginId] || [];
@@ -68,11 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function displayReviews(pluginId) {
+    function displayReviews(pluginId, page = 1) {
         const reviewsContainer = document.getElementById('reviews-container');
         reviewsContainer.innerHTML = '';
         const pluginReviews = reviews[pluginId] || [];
-        pluginReviews.forEach(review => {
+        const start = (page - 1) * reviewsPerPage;
+        const end = start + reviewsPerPage;
+        const paginatedReviews = pluginReviews.slice(start, end);
+
+        paginatedReviews.forEach(review => {
             const reviewElement = document.createElement('div');
             reviewElement.className = 'review';
 
@@ -87,6 +98,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
             reviewsContainer.appendChild(reviewElement);
         });
+
+        // Add pagination controls
+        displayPaginationControls(pluginId, page, pluginReviews.length);
+    }
+
+    function displayPaginationControls(pluginId, page, totalReviews) {
+        const paginationContainer = document.getElementById('pagination-controls');
+        paginationContainer.innerHTML = '';
+
+        const totalPages = Math.ceil(totalReviews / reviewsPerPage);
+
+        if (totalPages > 1) {
+            if (page > 1) {
+                const prevButton = document.createElement('button');
+                prevButton.textContent = 'Previous';
+                prevButton.onclick = () => displayReviews(pluginId, page - 1);
+                paginationContainer.appendChild(prevButton);
+            }
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.onclick = () => displayReviews(pluginId, i);
+                if (i === page) {
+                    pageButton.disabled = true;
+                }
+                paginationContainer.appendChild(pageButton);
+            }
+
+            if (page < totalPages) {
+                const nextButton = document.createElement('button');
+                nextButton.textContent = 'Next';
+                nextButton.onclick = () => displayReviews(pluginId, page + 1);
+                paginationContainer.appendChild(nextButton);
+            }
+        }
     }
 
     function handleReviewFormSubmit(event) {
@@ -102,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         reviews[pluginId].push(newReview);
 
-        displayReviews(pluginId);
+        displayReviews(pluginId, currentPage);
         document.getElementById('review-form').reset();
         displayPlugins(plugins); // Update the ratings on the main page
     }
