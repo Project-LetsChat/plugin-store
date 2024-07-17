@@ -1,9 +1,11 @@
-/* Existing styles */
+/* Light theme */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 header {
@@ -12,6 +14,19 @@ header {
     padding: 1rem;
     text-align: center;
     position: relative;
+}
+
+header input[type="checkbox"].theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+header label[for="theme-toggle"] {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    color: white;
 }
 
 #search {
@@ -50,7 +65,6 @@ main {
     color: #555;
 }
 
-/* Updated styles for plugin container to create a horizontal layout */
 #plugin-container {
     display: flex;
     flex-wrap: wrap;
@@ -78,85 +92,34 @@ footer {
     bottom: 0;
 }
 
-/* New styles for reviews */
-.reviews {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 2rem auto;
-    padding: 2rem;
-    width: 80%;
-    max-width: 600px;
-}
-
-#reviews-container {
-    margin-bottom: 2rem;
-}
-
-.review {
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
-}
-
-.review:last-child {
-    border-bottom: none;
-}
-
-.review h4 {
-    margin: 0;
-}
-
-.review p {
-    margin: 0.5rem 0 0;
-}
-
-#review-form {
-    display: flex;
-    flex-direction: column;
-}
-
-#review-form label {
-    margin-top: 1rem;
-}
-
-#review-form input, #review-form select, #review-form textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-#review-form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
+/* Dark theme */
+body.dark-theme {
     background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+    color: #f0f0f0;
 }
 
-#review-form button:hover {
-    background-color: #555;
+body.dark-theme header {
+    background-color: #444;
 }
 
-/* New styles for pagination controls */
-#pagination-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+body.dark-theme .plugin-card {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #f0f0f0;
 }
 
-#pagination-controls button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+body.dark-theme .plugin-card p {
+    color: #ccc;
 }
 
-#pagination-controls button:disabled {
-    background-color: #555;
-    cursor: not-allowed;
+body.dark-theme .plugin-detail {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #f0f0f0;
+}
+
+body.dark-theme footer {
+    background-color: #444;
 }
 
 /* New styles for download button */
@@ -176,6 +139,14 @@ footer {
     background-color: #555;
 }
 
+body.dark-theme .download-button {
+    background-color: #555;
+}
+
+body.dark-theme .download-button:hover {
+    background-color: #777;
+}
+
 /* New styles for back button */
 .back-button {
     position: absolute;
@@ -191,4 +162,62 @@ footer {
 
 .back-button:hover {
     background-color: #555;
+}
+
+body.dark-theme .back-button {
+    background-color: #555;
+}
+
+body.dark-theme .back-button:hover {
+    background-color: #777;
+}
+
+/* New styles for repo link */
+.repo-link {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.repo-link:hover {
+    background-color: #555;
+}
+
+body.dark-theme .repo-link {
+    background-color: #555;
+}
+
+body.dark-theme .repo-link:hover {
+    background-color: #777;
+}
+
+/* New styles for license link */
+#plugin-license {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#plugin-license:hover {
+    background-color: #555;
+}
+
+body.dark-theme #plugin-license {
+    background-color: #555;
+}
+
+body.dark-theme #plugin-license:hover {
+    background-color: #777;
 }

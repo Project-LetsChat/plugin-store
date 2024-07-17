@@ -10,39 +10,17 @@
     <header>
         <h1 id="plugin-name">Plugin Name</h1>
         <a href="index.html" class="back-button">Back to Main Page</a>
+        <input type="checkbox" id="theme-toggle" class="theme-toggle">
+        <label for="theme-toggle">Dark Mode</label>
     </header>
     <main>
         <div class="plugin-detail">
             <p id="plugin-description">Description: </p>
             <p id="plugin-version">Version: </p>
             <p id="plugin-author">Author: </p>
-            <p id="plugin-license">License: </p>
+            <a id="plugin-license" href="#" target="_blank">License: </a>
+            <a id="plugin-repo" href="#" class="repo-link" target="_blank">View Repository</a>
             <a id="download-button" href="#" class="download-button" download>Download Plugin</a>
-        </div>
-        <div class="reviews">
-            <h2>Reviews</h2>
-            <div id="reviews-container">
-                <!-- Reviews will be dynamically added here -->
-            </div>
-            <div id="pagination-controls">
-                <!-- Pagination controls will be dynamically added here -->
-            </div>
-            <form id="review-form">
-                <h3>Submit a Review</h3>
-                <label for="reviewer-name">Name:</label>
-                <input type="text" id="reviewer-name" required>
-                <label for="reviewer-rating">Rating:</label>
-                <select id="reviewer-rating" required>
-                    <option value="5">5 - Excellent</option>
-                    <option value="4">4 - Good</option>
-                    <option value="3">3 - Average</option>
-                    <option value="2">2 - Poor</option>
-                    <option value="1">1 - Terrible</option>
-                </select>
-                <label for="reviewer-comment">Comment:</label>
-                <textarea id="reviewer-comment" rows="4" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
         </div>
     </main>
     <footer>
