@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const plugins = [
-        { id: 1, name: 'Plugin One', description: 'Description for plugin one.', version: '1.0.0', author: 'Author One', downloadUrl: 'example.txt' },
-        { id: 2, name: 'Plugin Two', description: 'Description for plugin two.', version: '1.1.0', author: 'Author Two', downloadUrl: 'example.txt' },
-        { id: 3, name: 'Plugin Three', description: 'Description for plugin three.', version: '1.2.0', author: 'Author Three', downloadUrl: 'example.txt' },
+        { id: 1, name: 'Plugin One', description: 'Description for plugin one.', version: '1.0.0', author: 'Author One', license: 'MIT', downloadUrl: 'example.txt' },
+        { id: 2, name: 'Plugin Two', description: 'Description for plugin two.', version: '1.1.0', author: 'Author Two', license: 'Apache 2.0', downloadUrl: 'example.txt' },
+        { id: 3, name: 'Plugin Three', description: 'Description for plugin three.', version: '1.2.0', author: 'Author Three', license: 'GPLv3', downloadUrl: 'example.txt' },
     ];
 
     const reviews = {
@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('plugin-description').textContent = `Description: ${selectedPlugin.description}`;
             document.getElementById('plugin-version').textContent = `Version: ${selectedPlugin.version}`;
             document.getElementById('plugin-author').textContent = `Author: ${selectedPlugin.author}`;
+            document.getElementById('plugin-license').textContent = `License: ${selectedPlugin.license}`;
 
             const downloadButton = document.getElementById('download-button');
             downloadButton.href = selectedPlugin.downloadUrl;
