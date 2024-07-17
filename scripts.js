@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const plugins = [
-        { id: 1, name: 'Plugin One', description: 'Description for plugin one.', version: '1.0.0', author: 'Author One', license: 'MIT', licenseUrl: 'https://opensource.org/licenses/MIT', downloadUrl: 'example.txt', repoUrl: 'https://github.com/user/plugin-one' },
-        { id: 2, name: 'Plugin Two', description: 'Description for plugin two.', version: '1.1.0', author: 'Author Two', license: 'Apache 2.0', licenseUrl: 'https://opensource.org/licenses/Apache-2.0', downloadUrl: 'example.txt', repoUrl: 'https://github.com/user/plugin-two' },
-        { id: 3, name: 'Plugin Three', description: 'Description for plugin three.', version: '1.2.0', author: 'Author Three', license: 'GPLv3', licenseUrl: 'https://www.gnu.org/licenses/gpl-3.0.en.html', downloadUrl: 'example.txt', repoUrl: 'https://github.com/user/plugin-three' },
+        { id: 1, name: 'Plugin One', description: 'Description for plugin one.', version: '1.0.0', author: 'Author One', license: 'MIT', licenseUrl: 'https://mit-license.org/', downloadUrl: 'example.txt', repoUrl: 'https://github.com/BhargavEkbote/plugin-store.git' },
+        { id: 2, name: 'Plugin Two', description: 'Description for plugin two.', version: '1.1.0', author: 'Author Two', license: 'Apache 2.0', licenseUrl: 'https://opensource.org/license/apache-2-0', downloadUrl: 'example.txt', repoUrl: 'https://github.com/BhargavEkbote/plugin-store.git' },
+        { id: 3, name: 'Plugin Three', description: 'Description for plugin three.', version: '1.2.0', author: 'Author Three', license: 'GPLv3', licenseUrl: 'https://www.gnu.org/licenses/gpl-3.0.en.html', downloadUrl: 'example.txt', repoUrl: 'https://github.com/BhargavEkbote/plugin-store.git' },
     ];
 
     const pluginContainer = document.getElementById('plugin-container');
