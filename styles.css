@@ -32,8 +32,15 @@ header label[for="theme-toggle"] {
 #search {
     margin-top: 1rem;
     padding: 0.5rem;
-    width: 80%;
-    max-width: 500px;
+    width: 60%;
+    max-width: 400px;
+}
+
+#category-select {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 30%;
+    max-width: 200px;
 }
 
 main {
