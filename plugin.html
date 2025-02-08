@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 id="plugin-name">Plugin Name</h1>
+    <header class="plugin-page-header">
         <a href="index.html" class="back-button">Back to Main Page</a>
-        <input type="checkbox" id="theme-toggle" class="theme-toggle">
-        <label for="theme-toggle">Dark Mode</label>
+        <div class="theme-toggle-wrapper">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle">
+            <label for="theme-toggle"></label>
+            <span>Dark Mode</span>
+        </div>
     </header>
     <main>
         <div class="plugin-detail">
+            <h1 id="plugin-name">Plugin Name</h1>
             <p id="plugin-description">Description: </p>
             <p id="plugin-version">Version: </p>
             <p id="plugin-author">Author: </p>
@@ -24,6 +27,7 @@
             <a id="download-button" href="#" class="download-button" download>Download Plugin</a>
         </div>
     </main>
+    
     <footer>
         <p>&copy; 2024 LetsChat Web Framework</p>
     </footer>
